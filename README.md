@@ -14,35 +14,41 @@ Well, don't let that **basic** prefix throw you off, the main reason why I said 
 - Travis
 - Pytest
 
-## Installation
+## Get the code and start the server.
 
-1. Assuming you have Python setup, run the following commands:
+1. Get the code:
 
-   ```
-   pip3 install -r requirements.txt
-   python3 manage.py makemigrations
-   python3 manage.py migrate
-   python3 manage.py createsuperuser # Ah, create a superuser
-   python3 manage.py runserver
-   ```
+```
+git clone https://github.com/wandersonsc/basic_blog_api
+```
 
-2. Open tab to `http://127.0.0.1:8000/api/v1/users/` to see the main project
+2. Run it! Assuming you have Python setup, run the following commands:
+
+```
+pip3 install -r requirements.txt
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py createsuperuser
+python3 manage.py runserver
+
+```
+
+2. Open tab to `http://127.0.0.1:8000/api/v1/` to see the main project
 
 ## Testing
 
 To run the tests, check your test coverage, and generate a simplified coverage report & flake8:
 
-    $ pytest
-    $ flake8
+`$ pytest or $ pytest & flake8`
 
 ```python
-    def test_blog_models(db):
-        """
-        Test blog models
-        """
+ def test_blog_models(db):
+     """
+     Test blog models
+     """
 
-        post = mixer.blend('blog.Post')
-        assert post.pk == 1
+     post = mixer.blend('blog.Post')
+     assert post.pk == 1
 
 ```
 
@@ -54,17 +60,3 @@ To generate an HTML report:
 To check the report in console::
 
     $ coverage report -m
-
-## API Endpoints Quick Start Example:
-
-```python
-    class CreateUserView(generics.CreateAPIView):
-        """ Create a new instance """
-
-        serializer_class = UserSerializer
-        permission_classes = (permissions.AllowAny,)
-```
-
-## Swagger Specification and Documentation
-
-1. Open tab to `http://127.0.0.1:8000/docs/` to see the Swagger specification as well as the Documentation

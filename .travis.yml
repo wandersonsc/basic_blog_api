@@ -8,5 +8,5 @@ install:
   - pip3 install -r requirements.txt
 
 #Command to run tests
-scripts:
+script:
   - pytest
