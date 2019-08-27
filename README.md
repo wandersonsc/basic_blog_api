@@ -5,6 +5,7 @@
 Well, don't let that **basic** prefix throw you off, the main reason why I said basic_blog because we will not be using and JS frontend framework like React.
 
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)
+[![Build Status](https://travis-ci.org/wandersonsc/basic_blog_api.svg?branch=master)](https://travis-ci.org/wandersonsc/basic_blog_api)
 
 ## Technology Stack
 
