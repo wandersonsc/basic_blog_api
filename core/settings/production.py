@@ -2,7 +2,7 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['ip-address', 'wwww.plunder.com']
+ALLOWED_HOSTS = ['ip-address', 'http://127.0.0.1:8000/api/v1/']
 
 
 # Postgresql Settings

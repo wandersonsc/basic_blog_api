@@ -1,10 +1,11 @@
 from .base import *
+from decouple import config, Csv
 
 
 # DEBUG = True
-DEBUG = True
+DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 # Application definition
 INSTALLED_APPS += [

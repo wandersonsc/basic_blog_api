@@ -1,4 +1,5 @@
 from .base import *
+from decouple import config
 
 DATABASES = {
     'default': {
@@ -6,4 +7,4 @@ DATABASES = {
         'NAME': ':memory:',
     }
 }
-EMAIL_BACKEND = 'django.core.mail.backends.locmem.EmailBackend'
+EMAIL_BACKEND = config('EMAIL_BACKEND', default='django.core.mail.backends.smtp.EmailBackend')
