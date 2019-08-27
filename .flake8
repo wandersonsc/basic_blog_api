@@ -4,8 +4,12 @@ exclude = .git,
            */.tox/*,
            */.venv/*, 
            *migrations*,
+           *settings\production*,
+           *settings\test_settings*,
+           *settings\development*,
             __pycache__, 
             manage.py, 
             settings.py
             
 max-line-length = 119
+ignore = W291
