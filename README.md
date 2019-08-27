@@ -68,6 +68,3 @@ To check the report in console::
 ## Swagger Specification and Documentation
 
 1. Open tab to `http://127.0.0.1:8000/docs/` to see the Swagger specification as well as the Documentation
-
-![Swagger](https://i.ibb.co/h2yq7zh/Screenshot-2019-06-04-22-42-59.png)
-![Swagger](https://i.ibb.co/kcb8bM6/Screenshot-2019-06-04-22-59-50.png)
