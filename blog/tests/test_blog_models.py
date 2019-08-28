@@ -6,9 +6,12 @@ def test_blog_models(db):
     Test the Blog models
     """ 
 
-    post = mixer.blend('blog.Post', title="Django - React & Redux")
+    comments = mixer.blend('comments.Comment')
+    post = mixer.blend('blog.Post', comments=comments, title="Django - React & Redux")
     assert post.pk == 1
     assert post.title == "Django - React & Redux"
+
+    print(" Post comments: ", post.comments)  # Run pytest -s
 
 
 def test_return_post_title(db):
