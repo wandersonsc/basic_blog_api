@@ -21,7 +21,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # local apps
-
+    'blog',
+    'comments',
 
     # third-party apps
     'django_filters',

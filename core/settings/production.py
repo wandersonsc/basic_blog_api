@@ -1,6 +1,8 @@
 from .base import *
+from decouple import config
 
-DEBUG = False
+
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ['ip-address', 'http://127.0.0.1:8000/api/v1/']
 
