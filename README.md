@@ -48,8 +48,14 @@ To run the tests, check your test coverage, and generate a simplified coverage r
      Test blog models
      """
 
-     post = mixer.blend('blog.Post')
-     assert post.pk == 1
+    comments = mixer.blend('comments.Comment')
+    post = mixer.blend(
+        'blog.Post',
+        comments=comments,
+        title="Django - React & Redux"
+        )
+    assert post.pk == 1
+    assert post.title == "Django - React & Redux"
 
 ```
 

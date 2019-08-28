@@ -10,8 +10,8 @@ class Comment(models.Model):
     updated_at = models.DateTimeField(_('Updated at'), auto_now=True)
 
     class Meta:
-        verbose_name: "My Comment"
-        verbose_name_plural: "My Comments"
+        verbose_name = "My Comment"
+        verbose_name_plural = "My Comments"
 
     def __str__(self):
         return self.comments

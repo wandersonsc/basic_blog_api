@@ -13,8 +13,8 @@ class Post(models.Model):
     updated_at = models.DateTimeField(_('Updated at'), auto_now=True)
 
     class Meta:
-        verbose_name: "My Post"
-        verbose_name_plural: "My Posts"
+        verbose_name = "My Post"
+        verbose_name_plural = "My Posts"
 
     def __str__(self):
         return self.title
