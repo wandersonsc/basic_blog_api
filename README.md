@@ -2,11 +2,10 @@
 
 ### Blog Api Using Best practices for Test Driven Development (TDD) & Pytest
 
-Well, don't let that **basic** prefix throw you off, the main reason why I said basic_blog because we will not be using and JS frontend framework like React.
+Well, don't let that **basic** prefix throw you off, the main reason why I said basic_blog because we will not be using any JS frontend framework like React.
 
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)
+[!PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)
 [![Build Status](https://travis-ci.org/wandersonsc/basic_blog_api.svg?branch=master)](https://travis-ci.org/wandersonsc/basic_blog_api)
-
 [![codecov](https://codecov.io/gh/wandersonsc/basic_blog_api/branch/master/graph/badge.svg)](https://codecov.io/gh/wandersonsc/basic_blog_api)
 
 ## Technology Stack
@@ -27,7 +26,7 @@ git clone https://github.com/wandersonsc/basic_blog_api
 
 2. Run it! Assuming you have Python setup, run the following commands:
 
-```
+```sh
 pip3 install -r requirements.txt
 python3 manage.py makemigrations
 python3 manage.py migrate
@@ -42,7 +41,10 @@ python3 manage.py runserver
 
 To run the tests, check your test coverage, and generate a simplified coverage report & flake8:
 
-`$ pytest or $ pytest & flake8`
+```sh
+pytest or $ pytest & flake8
+
+```
 
 ```python
  def test_blog_models(db):
@@ -63,9 +65,13 @@ To run the tests, check your test coverage, and generate a simplified coverage r
 
 To generate an HTML report:
 
+```sh
     $ coverage html
-    $ open htmlcov/index.html
+     $ open htmlcov/index.html
+```
 
 To check the report in console::
 
+```sh
     $ coverage report -m
+```

@@ -26,9 +26,11 @@ INSTALLED_APPS = [
 
     # third-party apps
     'django_filters',
+    'drf_yasg',
     'rest_framework',
     # 'rest_framework.authtoken',
-    'rest_framework_swagger',
+
+
 ]
 
 MIDDLEWARE = [
@@ -112,13 +114,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Swagger Settings
-SWAGGER_SETTINGS = {
-    'SHOW_REQUEST_HEADERS': True,
-    'SUPPORTED_SUBMIT_METHODS': [
-        'get',
-        'post',
-    ]
-}
+
 
 # Custom Django auth settings
 # AUTH_USER_MODEL = 'accounts.User'
