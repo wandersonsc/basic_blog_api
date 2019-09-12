@@ -15,7 +15,7 @@ def post(db):
 
 def test_blog_models(db, post):
     """
-    Test the Blog models
+    Test Blog Models
     """ 
 
     assert post.pk == 1
