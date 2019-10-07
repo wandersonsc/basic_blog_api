@@ -21,7 +21,16 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
+    # admin
     path('admin/', admin.site.urls),
+
+    # blog
+    path('blog/', include('blog.urls', namespace='blog')),
+
+    # auth
+    path('auth/', include('djoser.urls')),
+
+    # swagger
     path('swagger(?<format>\.json|\.yaml)',
          schema_view.without_ui(
              cache_timeout=0), 
@@ -36,7 +45,7 @@ urlpatterns = [
          schema_view.with_ui(
              'redoc', cache_timeout=0), 
          name='schema-redoc'
-         ),  # swagger
+         ),
 
 ]
 if settings.DEBUG:
