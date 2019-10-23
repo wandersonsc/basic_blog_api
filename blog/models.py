@@ -12,11 +12,13 @@ class Post(models.Model):
     title = models.CharField(_('Post Title'), 
     max_length=150, 
     unique=True,
-    help_text="Post Title")
+    help_text="Post Title"
+    )
     slug = models.SlugField(_('Slug'), 
     max_length=150,
     unique=True,
-    help_text="Slug of the title")
+    help_text="Slug of the title"
+    )
     comments = models.ForeignKey(Comment, 
     related_name='Comments', 
     on_delete=models.CASCADE,

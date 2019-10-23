@@ -11,6 +11,7 @@ class CommentSerializer(serializers.ModelSerializer):
         model = Comment
         fields = (
             'comments',
+            'status',
             'create_at',
             'updated_at'
         )
@@ -20,7 +21,7 @@ class CommentSerializer(serializers.ModelSerializer):
         }
 
 
-class BlogSerializer(serializers.ModelSerializer):
+class PostSerializer(serializers.ModelSerializer):
     """ A serializer for the Blog model """
 
     comments = serializers.ReadOnlyField(source='comments.comment')

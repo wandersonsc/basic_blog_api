@@ -16,7 +16,7 @@ def test_blog_serializer(db):
         'comments': comment
     }
 
-    serializer = serializers.BlogSerializer(data=data)
+    serializer = serializers.PostSerializer(data=data)
     assert serializer.is_valid() == True
     assert serializer.errors == {}
     print(f"Errors: {serializer.errors}")

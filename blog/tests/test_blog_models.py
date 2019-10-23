@@ -13,7 +13,7 @@ def test_blog_models(db, post):
     print(" Post slug: ", post.slug)  # Run pytest -s
 
 
-def test_return_post_title(db, post):
+def test_string_representation(db, post):
     """
     Test the method __str__
     """

@@ -1,11 +1,11 @@
 from django.urls import path
 
 from .views import (
-    ListAllBlogPostApiView
+    ListAllPostApiView,
 )
 
 app_name = 'blog'
 
 urlpatterns = [
-    path('posts/', ListAllBlogPostApiView.as_view(), name='all'),
+    path('posts/', ListAllPostApiView.as_view(), name='all'),
 ]
