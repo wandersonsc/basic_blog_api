@@ -12,5 +12,7 @@ def test_all_installed_apps():
     assert 'comments' in INSTALLED_APPS
     assert 'debug_toolbar' in INSTALLED_APPS
     assert 'django_filters' in INSTALLED_APPS
-    assert 'rest_framework' in INSTALLED_APPS
+    assert 'django_extensions' in INSTALLED_APPS
+    assert 'django_braces' in INSTALLED_APPS
     assert 'drf_yasg' in INSTALLED_APPS
+    assert 'rest_framework' in INSTALLED_APPS

@@ -9,11 +9,27 @@ from django.template.defaultfilters import slugify
 class Post(models.Model):
     """  Model representation of the Post """
 
-    title = models.CharField(_('Post Title'), max_length=150, unique=True)
-    slug = models.SlugField(_('Slug'), max_length=150, unique=True)
-    comments = models.ForeignKey(Comment, related_name='Comments', on_delete=models.CASCADE)
-    create_at = models.DateTimeField(_('Create at'), auto_now_add=True)
-    updated_at = models.DateTimeField(_('Updated at'), auto_now=True)
+    title = models.CharField(_('Post Title'), 
+    max_length=150, 
+    unique=True,
+    help_text="Post Title")
+    slug = models.SlugField(_('Slug'), 
+    max_length=150,
+    unique=True,
+    help_text="Slug of the title")
+    comments = models.ForeignKey(Comment, 
+    related_name='Comments', 
+    on_delete=models.CASCADE,
+    verbose_name=_('Coment')
+    )
+    create_at = models.DateTimeField(_('Create at'), 
+    auto_now_add=True, 
+    help_text="Create at"
+    )
+    updated_at = models.DateTimeField(_('Updated at'), 
+    auto_now=True,  
+    help_text="Updating data"
+    )
 
     class Meta:
         verbose_name = "My Post"
